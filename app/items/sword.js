@@ -4,12 +4,12 @@ const sword = {
 
     power: 10,
 
-    buff: function(player){
+    buff: function(){
         player.damage+=sword.power;
     }
 }
 
-const swords = [
-    {x: 200, y: 400},
-    {x: 500, y: 150},
+let swords = [
+    {x: 100, y: 170},
+    {x: 880, y: 300},
 ]

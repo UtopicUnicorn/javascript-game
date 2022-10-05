@@ -20,15 +20,19 @@ const speed = 1;
 
 function checkDirection() {
     if (keyDown('w')) {
-        player['y'] -= speed;
+        player.y -= speed;
     }
     if (keyDown('s')) {
-        player['y'] += speed;
+        player.y += speed;
     }
     if (keyDown('a')) {
-        player['x'] -= speed;
+        player.x -= speed;
     }
     if (keyDown('d')) {
-        player['x'] += speed;
+        player.x += speed;
+    }
+
+    if(keyDown('c')){
+        player.attack();
     }
 }

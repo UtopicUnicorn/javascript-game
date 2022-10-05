@@ -1,4 +1,4 @@
-
+const FPS = 120;
 document.addEventListener('DOMContentLoaded',domloaded,false);
 
 function domloaded() {
@@ -6,5 +6,6 @@ function domloaded() {
         setInterval(function (){
             draw();
             checkDirection();
-        },1)
+            checkItemTaken();
+        },1000/FPS)
 }

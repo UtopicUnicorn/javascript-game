@@ -63,7 +63,6 @@ function draw() {
             }
         }
     }
-    context.drawImage(p, player.x, player.y, tileSize, tileSize);
 
     enemies.forEach(el=>{
         context.drawImage(enemy_a, el.x, el.y, tileSize, tileSize);
@@ -76,5 +75,7 @@ function draw() {
     swords.forEach(el=>{
         context.drawImage(sword_p, el.x, el.y, tileSize, tileSize)
     })
+
+    context.drawImage(p, player.x, player.y, tileSize, tileSize);
 
 }

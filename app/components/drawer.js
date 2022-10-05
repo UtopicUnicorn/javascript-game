@@ -29,6 +29,14 @@ canvas.height = 640;
 const context = canvas.getContext('2d');
 const wall = new Image();
 const road = new Image();
+const p = new Image();
+const enemy_a = new Image();
+
+wall.src = '../assets/images/tile-W.png';
+road.src = '../assets/images/tile-.png';
+p.src = '../assets/images/tile-P.png';
+enemy_a.src = '../assets/images/tile-E.png';
+
 
 function draw() {
     const tileSize = 32;
@@ -44,4 +52,8 @@ function draw() {
             }
         }
     }
+    context.drawImage(p, player.x, player.y, tileSize, tileSize);
+    enemies.forEach(element=>{
+        context.drawImage(enemy_a, element.x, element.y, tileSize,tileSize);
+    })
 }

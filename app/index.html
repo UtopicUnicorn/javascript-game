@@ -8,18 +8,34 @@
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i|Tinos:400,400i&amp;subset=cyrillic" rel="stylesheet">
-<style>
-* { box-sizing: border-box; }
-body, html { height: 100%; }
-body { background-color: #000000; color: #ffffff; }
-h1 { font-family: "Playfair Display"; font-size: 30px; padding: 10px 0px; margin: 0px; }
-.field-box { border: 2px solid #d0d0d0; float: left; }
-.field { position: relative; width: 1024px; height: 640px; }
-.cl { clear: both; display: block; }
-</style>
+
+    	<style>
+			* { box-sizing: border-box; }
+			body, html { height: 100%; }
+			body { background-color: #000000; color: #ffffff; }
+			h1 { font-family: "Playfair Display"; font-size: 30px; padding: 10px 0px; margin: 0px; }
+			.field-box { border: 2px solid #d0d0d0; float: left; }
+			.field { position: relative; width: 1024px; height: 640px; }
+			.cl { clear: both; display: block; }
+			.status-box {display: flex}
+			span{ margin-right:40px; margin-left: 40px }
+		</style>
+		<title>
+			JavaScript game
+		</title>
+
 	</head>
+
 	<body>
-		<h1>Игровое поле</h1>
+		<div class="status-box">
+			<h1>Игровое поле</h1>
+			<span></span>
+			<h1>Здоровье игрока: </h1>
+			<h1 id="health"></h1>
+			<span></span>
+			<h1>Урон игрока: </h1>
+			<h1 id="damage"></h1>
+		</div>
 		<div class="field-box">
 			<canvas id="canvas" class="field"></canvas>
 		</div>

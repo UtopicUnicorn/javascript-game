@@ -25,8 +25,8 @@ function checkWall(actor, oldX, oldY){
         for (let j = 0; j < map[i].length; j++) {
             //if tile is a wall
             if (map[i][j] === 0) {
-                //check if actor stepping on wall tile but give one pixel to go through corridors smoothly
-                if(Math.abs(actor.x-j*tileSize)<=tileSize-2 && Math.abs(actor.y-i*tileSize)<=tileSize-2){
+                //check if actor stepping on wall tile but give 4 pixel to go through corridors smoothly
+                if(Math.abs(actor.x-j*tileSize)<=tileSize-3 && Math.abs(actor.y-i*tileSize)<=tileSize-3){
                     //if actor on wall placing old position
                     actor.x = oldX;
                     actor.y = oldY;

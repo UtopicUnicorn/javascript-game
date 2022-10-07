@@ -7,5 +7,6 @@ function domloaded() {
             draw();
             checkDirection();
             checkItemTaken();
+            enemiesActions();
         },1000/FPS)
 }

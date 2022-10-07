@@ -43,7 +43,7 @@ function checkDirection() {
         checkWall(player, oldX, oldY);
     }
 
-    if(keyDown('c')){
+    if(keyDown(' ')){
         enemies.forEach(element=>{
             player.attack(element);
             //check if enemy dies

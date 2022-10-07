@@ -22,23 +22,23 @@ function checkDirection() {
     const oldY = player.y;
 
 
-    if (keyDown('w')) {
+    if (keyDown('w') || keyDown('ц')) {
         player.y -= player.speed;
         checkWall(player,oldX, oldY);
 
     }
-    if (keyDown('s')) {
+    if (keyDown('s')|| keyDown('ы')) {
         player.y += player.speed;
         checkWall(player, oldX, oldY);
     }
 
-    if (keyDown('a')) {
+    if (keyDown('a')|| keyDown('ф')) {
         player.x -= player.speed;
         checkWall(player, oldX, oldY);
 
     }
 
-    if (keyDown('d')) {
+    if (keyDown('d')|| keyDown('в')) {
         player.x += player.speed;
         checkWall(player, oldX, oldY);
     }

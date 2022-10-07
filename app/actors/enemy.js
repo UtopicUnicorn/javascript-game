@@ -52,7 +52,6 @@ const enemy ={
         //if player is close less than 10 pixels - attack player
         if(Math.abs(element.x - player.x)<=32 && Math.abs(element.y - player.y)<=32){
             enemy.attack(element);
-            console.log(player.health);
 
             //check if player dead
             player.death();
@@ -65,15 +64,33 @@ const enemy ={
 
 const enemies = [
     {
-        x: 150, y: 350, health: 100, damage: 1,
+        x: 160, y: 350, health: 100, damage: 1,
     },
     {
-        x: 800, y:520, health: 100, damage: 1,
+        x: 900, y:520, health: 100, damage: 1,
     },
     {
         x: 300, y:100, health: 100, damage: 1,
     },
     {
         x: 850, y: 100, health: 100, damage: 1,
+    },
+    {
+        x: 410, y: 80, health: 100, damage: 1,
+    },
+    {
+        x: 560, y:60, health: 100, damage: 1,
+    },
+    {
+        x: 700, y:50, health: 100, damage: 1,
+    },
+    {
+        x: 400, y: 310, health: 100, damage: 1,
+    },
+    {
+        x: 290, y:310, health: 100, damage: 1,
+    },
+    {
+        x: 700, y: 310, health: 100, damage: 1,
     },
 ]

@@ -1,8 +1,6 @@
 const sword = {
-    x: Number,
-    y: Number,
-
-    power: 10,
+    //amount of damage that sword gives
+    power: 2,
 
     buff: function(){
         player.damage+=sword.power;
@@ -10,6 +8,10 @@ const sword = {
 }
 
 let swords = [
-    {x: 100, y: 170},
-    {x: 880, y: 300},
+    {
+        x: 100, y: 170
+    },
+    {
+        x: 880, y: 300
+    },
 ]

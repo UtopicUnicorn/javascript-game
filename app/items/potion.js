@@ -1,9 +1,6 @@
 const potion = {
-    tile: Image,
-    x: Number,
-    y: Number,
-
-    power: 20000,
+    //amount of health that potion gives
+    power: 500,
 
     heal: function (){
         player.health+=potion.power;

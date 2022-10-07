@@ -16,23 +16,39 @@ function keyDown(key){
     return keysDown.includes(key);
 }
 
-const speed = 1;
-
 function checkDirection() {
+
+    const oldX = player.x;
+    const oldY = player.y;
+
+
     if (keyDown('w')) {
-        player.y -= speed;
+        player.y -= player.speed;
+        checkWall(player,oldX, oldY);
+
     }
     if (keyDown('s')) {
-        player.y += speed;
+        player.y += player.speed;
+        checkWall(player, oldX, oldY);
     }
+
     if (keyDown('a')) {
-        player.x -= speed;
+        player.x -= player.speed;
+        checkWall(player, oldX, oldY);
+
     }
+
     if (keyDown('d')) {
-        player.x += speed;
+        player.x += player.speed;
+        checkWall(player, oldX, oldY);
     }
 
     if(keyDown('c')){
-        player.attack();
+        enemies.forEach(element=>{
+            player.attack(element);
+            //check if enemy dies
+            enemy.death(element, enemies.indexOf(element))
+        })
     }
 }
+

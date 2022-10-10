@@ -1,25 +1,21 @@
 const player ={
-    x : 100,
-    y : 100,
+    x : Number,
+    y : Number,
     health: 500,
-    damage: 1,
+    damage: 2,
     speed: 1,
+    maxHealth: 500,
 
     attack: function(enemy){
-        //if enemy in one tile from player - attack
-        if(Math.abs(player.x-enemy.x)<=32 && Math.abs(player.y-enemy.y)<=32){
+        // if enemy in one tile from player - attack
+        if(Math.abs(player.x-enemy.x)<=tileSize && Math.abs(player.y-enemy.y)<=tileSize){
             enemy.health-=player.damage;
         }
     },
 
     death: function(){
-        //respawn if player dies
-        if(this.health<=0){
-            this.x = 100;
-            this.y = 100;
-            this.health = 500;
-            this.damage = 1;
-        }
+        // return true if player is dead
+        return this.health <= 0;
     },
 
 }

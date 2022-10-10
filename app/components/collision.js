@@ -18,8 +18,6 @@ function checkItemTaken(){
 }
 
 function checkWall(actor, oldX, oldY){
-    const tileSize = 32;
-
     //going through all map to check all tiles
     for (let i = 0; i < map.length; i++) {
         for (let j = 0; j < map[i].length; j++) {

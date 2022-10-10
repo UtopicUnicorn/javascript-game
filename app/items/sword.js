@@ -7,11 +7,4 @@ const sword = {
     }
 }
 
-let swords = [
-    {
-        x: 100, y: 170
-    },
-    {
-        x: 880, y: 300
-    },
-]
+let swords = [];
